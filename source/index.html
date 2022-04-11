@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Заявка на ремонт</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/open-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 </head>
-<body>
-  <h1>Добро пожаловать в верстку в Тинькофф банке</h1>
+<body class="page__body">
+  <main class="page__main">
+    <form class="form">
+      <h1>Ваша квартира будет как новенькая</h1>
+      <p>У наших клиентов есть возможность получать услуги высокого качества по доступным ценам от отечественного оператора</p>
+      <ul class="form__list">
+        <li class="form__element">
+          <label class="visually-hidden" for="name">Имя</label>
+          <input type="text" name="name" id="name" placeholder="Имя" required>
+        </li>
+        <li class="form__element">
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input type="tel" pattern="\+?[0-9\s\-\(\)]+" name="phone" id="phone" placeholder="Телефон" required>
+        </li>
+      </ul>
+      <div class="form__checkbox">
+        <input type="checkbox" name="form-checkbox" class="visually-hidden" id="form-checkbox" required checked>
+        <label for="form-checkbox">Звонок менеджера не требуется</label>
+      </div>
+      <button class="form__button" type="submit">Отправить заявку</button>
+      <span class="form__confidentiality">Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь
+        <a href="№">с политикой конфиденциальности&nbsp;</a>
+      </span>
+    </form>
+    <picture>
+      <source type="image/webp" media="(max-width: 639px)" srcset="img/main-image-mobile.webp 1x, img/main-image-mobile-2x.webp 2x">
+      <source type="image/webp" media="(max-width: 959px)" srcset="img/main-image-tablet.webp 1x, img/main-image-tablet-2x.webp 2x">
+      <source type="image/webp" media="(max-width: 1365px)" srcset="img/main-image-pre-desktop.webp 1x, img/main-image-pre-desktop-2x.webp 2x">
+      <source type="image/webp" srcset="img/main-image-desktop.webp 1x, img/main-image-desktop-2x.webp 2x">
+      <!-- 1х: width: 682px height: 768px; 2x: width: 1364px height: 15364px -->
+      <img class="page__main-image" src="img/main-image-desktop.jpg" width="682" height="768" alt="Уютная квартира">
+    </picture>
+  </main>
 </body>
 </html>

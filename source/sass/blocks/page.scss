@@ -1,0 +1,42 @@
+.page__main {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  width: 1366px;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0 4px 4px 2px $extra-light-gray;
+
+  @media (max-width: $desktop-width) {
+    width: 960px;
+    box-shadow: none;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+    width: 640px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.page__main-image {
+  background-color: $image-bacground;
+  display: block;
+  height: 100%;
+
+  @media (max-width: $desktop-width) {
+  width: 480px;
+  }
+
+  @media (max-width: $pre-desktop-width) {
+  width: 100%;
+  }
+}
+
+.form__list {
+  list-style: none;
+  padding: 0;
+}
