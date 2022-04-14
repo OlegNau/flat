@@ -1,19 +1,26 @@
 .form {
+  z-index: 2;
   width: auto;
+  height: 100vh;
   padding: 127px 121px 128px 132px;
   min-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 682px;
+  background-color: $white;
 
   @media (max-width: $desktop-width) {
     padding: 119px 52px 119px 68px;
     min-width: 480px;
+    margin-right: 480px;
   }
 
   @media (max-width: $pre-desktop-width) {
     padding: 64px 44px;
     order: 2;
+    margin-right: 0;
+    height: 100%;
   }
 
   @media (max-width: $tablet-width) {

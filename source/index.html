@@ -9,6 +9,12 @@
   <link rel="preload" href="fonts/open-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body class="page__body">
+  <picture>
+    <source type="image/webp" media="(max-width: 639px)" srcset="img/main-image-mobile.webp 1x, img/main-image-mobile-2x.webp 2x">
+    <source type="image/webp" srcset="img/main-image-tablet.webp 1x, img/main-image-tablet-2x.webp 2x">
+    <!-- 1х: width: 682px height: 768px; 2x: width: 1364px height: 15364px -->
+    <img class="page__main-image" src="img/main-image-tablet.jpg" width="640" height="428" alt="Уютная квартира">
+  </picture>
   <main class="page__main">
     <form class="form">
       <h1>Ваша квартира будет как новенькая</h1>
@@ -32,14 +38,6 @@
         <a href="№">с политикой конфиденциальности&nbsp;</a>
       </span>
     </form>
-    <picture>
-      <source type="image/webp" media="(max-width: 639px)" srcset="img/main-image-mobile.webp 1x, img/main-image-mobile-2x.webp 2x">
-      <source type="image/webp" media="(max-width: 959px)" srcset="img/main-image-tablet.webp 1x, img/main-image-tablet-2x.webp 2x">
-      <source type="image/webp" media="(max-width: 1365px)" srcset="img/main-image-pre-desktop.webp 1x, img/main-image-pre-desktop-2x.webp 2x">
-      <source type="image/webp" srcset="img/main-image-desktop.webp 1x, img/main-image-desktop-2x.webp 2x">
-      <!-- 1х: width: 682px height: 768px; 2x: width: 1364px height: 15364px -->
-      <img class="page__main-image" src="img/main-image-desktop.jpg" width="682" height="768" alt="Уютная квартира">
-    </picture>
   </main>
 </body>
 </html>
